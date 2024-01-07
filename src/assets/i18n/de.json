@@ -1,3 +1,9 @@
 {
-    "appTitle": "Stein, Schere, Papier"
+    "appTitle": "Stein, Schere, Papier",
+    "rock": "Stein",
+    "paper": "Schere",
+    "scissors": "Papier",
+    "rock (press '1')": "Stein (drücke '1')",
+    "paper (press '2')": "Papier (drücke '2')",
+    "scissors (press '3')": "Schere (drücke '3')"
 }

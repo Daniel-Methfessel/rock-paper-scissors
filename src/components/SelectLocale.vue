@@ -1,6 +1,16 @@
 <script setup lang="ts">
 </script>
 
+<style lang="scss">
+select {
+    display: block;
+    font-size: 1.5em;
+    margin: 0.25em;
+
+}
+</style>
+
+<!-- https://kazupon.github.io/vue-i18n/guide/locale.html -->
 <template>
     <div class="locale-changer">
         <select v-model="$i18n.locale">
@@ -12,15 +22,17 @@
 </template>
   
 <script lang="js">
-
 export default {
     name: 'locale-changer',
     data() {
-        return { langs: [
-            {locale:'en', title:'English'},
-             {locale:'de', title:'Deutsch'},
-             {locale: 'fr', title:'Français'}
-            ] }
+        return {
+            langs: [
+                { locale: 'en', title: 'English' },
+                { locale: 'de', title: 'Deutsch' },
+                { locale: 'fr', title: 'Français' }
+            ]
+        }
     }
 }
 </script>
+
