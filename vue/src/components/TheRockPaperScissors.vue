@@ -24,18 +24,16 @@ const onKey = function (event: KeyboardEvent) {
 }
 
 document.addEventListener('keypress', onKey)
-
 </script>
 
 <template>
     <div class="content">
         <div class="result">
-            <PlayerHand v-bind:player="gameState.human" />
-            <PlayerHand v-bind:player="gameState.robot" />
+            <PlayerHand :player="gameState.human" />
+            <PlayerHand :player="gameState.robot" />
         </div>
 
         <TheChoice @click-hand="onClick($event)" />
-
     </div>
 </template>
 
@@ -65,4 +63,4 @@ document.addEventListener('keypress', onKey)
         max-width: 85%;
     }
 }
-</style>@/game/Game
+</style>

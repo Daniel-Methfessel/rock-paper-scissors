@@ -35,11 +35,16 @@ export class Game {
 
         // Scoring.
         ++this.gamesPlayed.value
-        if (robotHand && humanHand && robotHand != humanHand) {
-            if (handBeats(this.human.hand.value, this.robot.hand.value)) {
-                ++this.human.score.value
+        if (robotHand && humanHand) {
+            if (robotHand == humanHand) {
+                this.human.tie()
+                this.robot.tie()
+            } else if (handBeats(humanHand, robotHand)) {
+                this.human.win()
+                this.robot.lose()
             } else {
-                ++this.robot.score.value
+                this.human.lose()
+                this.robot.win()
             }
         }
     }

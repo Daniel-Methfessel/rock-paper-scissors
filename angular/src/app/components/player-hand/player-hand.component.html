@@ -1,4 +1,6 @@
 <div class="player">
-    <app-hand-image [hand]="player.hand" />
+    <div [class]="cssClass()">
+        <app-hand-image [hand]="player.hand" />
+    </div>
     <p class="score">{{ player.percentage() }}</p>
 </div>

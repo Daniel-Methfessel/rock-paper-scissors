@@ -38,11 +38,16 @@ export class Game {
         if (this.human != this.robot) {
             const humanHand = this.human.hand()
             const robotHand = this.robot.hand()
-            if (robotHand && humanHand && robotHand != humanHand) {
-                if (handBeats(humanHand, robotHand)) {
-                    this.human.score.set(this.human.score() + 1)
+            if (robotHand && humanHand) {
+                if (robotHand == humanHand) {
+                    this.human.tie()
+                    this.robot.tie()
+                } else if (handBeats(humanHand, robotHand)) {
+                    this.human.win()
+                    this.robot.lose()
                 } else {
-                    this.robot.score.set(this.robot.score() + 1)
+                    this.human.lose()
+                    this.robot.win()
                 }
             }
         }

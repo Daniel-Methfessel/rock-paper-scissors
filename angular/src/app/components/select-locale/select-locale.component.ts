@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-select-locale',
@@ -13,4 +14,15 @@ export class SelectLocaleComponent {
     { locale: 'de', title: 'Deutsch' },
     { locale: 'fr', title: 'Français' }
   ]
+
+  public readonly currentLocale = signal('en')
+
+  constructor(private readonly translate: TranslateService) {
+
+  }
+
+  public setLocale(locale: string) {
+    this.translate.use(locale)
+    this.currentLocale.set(locale)
+  }
 }

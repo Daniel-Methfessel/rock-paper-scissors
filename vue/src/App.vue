@@ -5,7 +5,7 @@ import SelectLocale from './components/SelectLocale.vue';
 
 <template id="app">
   <header>
-    <h1>{{ $t('appTitle') }}</h1>
+    <h1>{{ $t('Rock, paper, scissors') }}</h1>
 
     <SelectLocale />
   </header>

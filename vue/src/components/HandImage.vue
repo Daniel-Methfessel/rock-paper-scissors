@@ -54,7 +54,7 @@ const source = computed(() => {
 
     @media (orientation:landscape) {
         flex-direction: column;
-        max-height: calc(30vh - 3em);
+        max-height: calc(30vh - 6em);
     }
 }
 </style>

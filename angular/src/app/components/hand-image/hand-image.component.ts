@@ -1,11 +1,14 @@
 import { Component, Input, OnInit, Signal, computed, signal } from '@angular/core';
 import { Hand } from '../../game/hand';
 import { marker as _ } from '@biesbjerg/ngx-translate-extract-marker';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hand-image',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule
+  ],
   templateUrl: './hand-image.component.html',
   styleUrl: './hand-image.component.scss'
 })
@@ -25,7 +28,7 @@ export class HandImageComponent implements OnInit {
   ])
 
   constructor() {
-    this.cssClass = computed( () => this.isClickable() ? 'clickable' : 'choosen')
+    this.cssClass = computed(() => this.isClickable() ? 'clickable' : 'choosen')
     this.hideImage = computed(() => !this.hand())
 
     this.label = computed(() => {
@@ -51,6 +54,6 @@ export class HandImageComponent implements OnInit {
     // Know only on OnInit the initial value of the hand.
     // It is not computed.
     // TODO: could of course have an explicit flag for it...
-    this.isClickable .set( !!this.hand())
+    this.isClickable.set(!!this.hand())
   }
 }

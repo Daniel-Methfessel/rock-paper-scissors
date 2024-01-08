@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Signal, computed } from '@angular/core';
 import { Player } from '../../game/player';
 import { HandImageComponent } from '../hand-image/hand-image.component';
 
@@ -13,4 +13,16 @@ import { HandImageComponent } from '../hand-image/hand-image.component';
 })
 export class PlayerHandComponent {
   @Input({ required: true }) public player!: Player
+
+  public readonly cssClass: Signal<string | undefined>
+
+  constructor() {
+    this.cssClass = computed(() => {
+      const wonLastGame = this.player.wonLastGame()
+      const lostLastGame = this.player.lostLastGame()
+      return wonLastGame ? 'winner'
+        : lostLastGame ? 'loser'
+          : 'tie'
+    })
+  }
 }
