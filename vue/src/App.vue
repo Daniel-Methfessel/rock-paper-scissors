@@ -19,6 +19,7 @@ import SelectLocale from './components/SelectLocale.vue';
         TODO: footer stuff:
         * image reference
         * idea reference
+        https://github.com/elsehow/aaronson-oracle
         * licensing
         * source code
         * my website
