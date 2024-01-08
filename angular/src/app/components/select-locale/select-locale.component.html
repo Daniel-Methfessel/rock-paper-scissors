@@ -1,0 +1,9 @@
+<div class="locale-changer">
+    <select>
+        @for( lang of langs; track lang.locale ) {
+        <option [value]="lang.locale">
+            {{ lang.title }}
+        </option>
+        }
+    </select>
+</div>

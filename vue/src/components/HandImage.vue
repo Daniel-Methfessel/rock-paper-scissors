@@ -33,7 +33,6 @@ const source = computed(() => {
         default: return '/scissors.svg?url'
     }
 })
-
 </script>
 
 <template>

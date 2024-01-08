@@ -1,0 +1,9 @@
+{
+    "appTitle": "Pierre, papier, ciseaux",
+    "rock": "Pierre",
+    "paper": "Papier",
+    "scissors": "Ciseaux",
+    "rock (press '1')": "pierre (pousser '1')",
+    "paper (press '2')": "papier (pousser '2')",
+    "scissors (press '3')": "ciseaux (pousser '3')"
+}

@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:rock-paper-scissors": "node dist/rock-paper-scissors/server/server.mjs"
+    "serve:ssr:rock-paper-scissors": "node dist/rock-paper-scissors/server/server.mjs",
+    "extract-translations": "ngx-translate-extract --input ./src --output ./src/assets/i18n/*.json --clean --sort --format namespaced-json --marker _"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,8 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.6",
+    "@bartholomej/ngx-translate-extract": "^8.0.2",
+    "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

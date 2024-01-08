@@ -1,0 +1,25 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media (orientation:portrait) {
+        flex-direction: column;
+    }
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-around;
+    max-width: 100%;
+
+    @media (orientation:landscape) {
+        max-height: calc(100vh - 6em);
+        max-width: 85%;
+    }
+}

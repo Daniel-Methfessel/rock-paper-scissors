@@ -23,18 +23,19 @@ export class Game {
         this.robot = new Player(this.gamesPlayed)
     }
 
-    public play(human: Hand) {
-        this.robot.hand.value = this.opponent.nextMove(this.history)
-        this.human.hand.value = human
+    public play(humanHand: Hand) {
+        const robotHand = this.opponent.nextMove(this.history)
+        this.robot.hand.value = robotHand
+        this.human.hand.value = humanHand
 
         // Only after the robot made his choice he can see the choice the human made.
-        this.opponent.updateModel(this.history, human)
+        this.opponent.updateModel(this.history, humanHand)
         // Adding to the history only after the robot learned from it!
-        this.history.add(human)
+        this.history.add(humanHand)
 
         // Scoring.
         ++this.gamesPlayed.value
-        if (this.human != this.robot) {
+        if (robotHand && humanHand && robotHand != humanHand) {
             if (handBeats(this.human.hand.value, this.robot.hand.value)) {
                 ++this.human.score.value
             } else {

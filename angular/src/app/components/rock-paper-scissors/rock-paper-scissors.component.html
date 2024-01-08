@@ -1,0 +1,8 @@
+<div class="content">
+    <div class="result">
+        <app-player-hand [player]="gameState.human" />
+        <app-player-hand [player]="gameState.robot" />
+    </div>
+
+    <app-the-choice (click-hand)="gameState.play($event)" />
+</div>

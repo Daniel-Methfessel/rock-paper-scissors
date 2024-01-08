@@ -1,0 +1,9 @@
+{
+    "appTitle": "Rock, paper, scissors",
+    "rock": "Rock",
+    "paper": "Paper",
+    "scissors": "Scissors",
+    "rock (press '1')": "rock (press '1')",
+    "paper (press '2')": "paper (press '2')",
+    "scissors (press '3')": "scissors (press '3')"
+}
