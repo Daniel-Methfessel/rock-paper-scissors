@@ -1,5 +1,7 @@
 {
     "Rock, paper, scissors": "Pierre, papier, ciseaux",
+	"Play!": "Jouer!",
+	"Not found": "La ressource demandée est introuvable.",
     "rock": "Pierre",
     "paper": "Papier",
     "scissors": "Ciseaux",

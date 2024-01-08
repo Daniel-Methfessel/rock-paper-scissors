@@ -1,5 +1,5 @@
 <div class="choice">
-    <app-hand-image [hand]="dummy(hands.Rock)" (click)="onClick(hands.Rock)" />
-    <app-hand-image [hand]="dummy(hands.Paper)" (click)="onClick(hands.Paper)" />
-    <app-hand-image [hand]="dummy(hands.Scissors)" (click)="onClick(hands.Scissors)" />
+    <app-hand-image [hand]="dummy(hands.Rock)" (click)="onClick(hands.Rock)" [isPlayer]="false" />
+    <app-hand-image [hand]="dummy(hands.Paper)" (click)="onClick(hands.Paper)" [isPlayer]="false" />
+    <app-hand-image [hand]="dummy(hands.Scissors)" (click)="onClick(hands.Scissors)" [isPlayer]="false" />
 </div>

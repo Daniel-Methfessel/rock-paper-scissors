@@ -1,5 +1,7 @@
 {
     "Rock, paper, scissors": "Rock, paper, scissors",
+	"Play!": "Play!",
+	"Not found": "The requested resource could not be found.",
     "rock": "Rock",
     "paper": "Paper",
     "scissors": "Scissors",

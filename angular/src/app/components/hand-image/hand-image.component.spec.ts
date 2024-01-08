@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HandImageComponent } from './hand-image.component';
+import { Hand } from '../../game/hand';
+import { signal } from '@angular/core';
 
 describe('HandImageComponent', () => {
   let component: HandImageComponent;
@@ -14,6 +16,8 @@ describe('HandImageComponent', () => {
     
     fixture = TestBed.createComponent(HandImageComponent);
     component = fixture.componentInstance;
+    component.hand = signal(Hand.Rock)
+    component.isPlayer = false
     fixture.detectChanges();
   });
 

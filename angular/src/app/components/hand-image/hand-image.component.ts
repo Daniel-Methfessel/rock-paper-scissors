@@ -14,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HandImageComponent implements OnInit {
   @Input({ required: true }) public hand!: Signal<Hand | undefined>
+  @Input({ required: true }) public isPlayer!: boolean
 
   private readonly isClickable = signal(false)
   public readonly cssClass: Signal<string>
@@ -54,6 +55,6 @@ export class HandImageComponent implements OnInit {
     // Know only on OnInit the initial value of the hand.
     // It is not computed.
     // TODO: could of course have an explicit flag for it...
-    this.isClickable.set(!!this.hand())
+    this.isClickable.set(this.isPlayer)
   }
 }

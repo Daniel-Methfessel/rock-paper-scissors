@@ -18,7 +18,7 @@ const cssClass = computed(() => {
 
 <template>
     <div class="player">
-        <HandImage :class="cssClass" :hand="props.player.hand" />
+        <HandImage :class="cssClass" :hand="props.player.hand" :isPlayer="true" />
         <p class="score">{{ player.percentage.value }}</p>
     </div>
 </template>

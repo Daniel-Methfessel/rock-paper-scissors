@@ -12,9 +12,9 @@ function onClick(hand: Hand): void { emit('clickHand', hand) }
 
 <template>
     <div class="choice">
-        <HandImage :hand="ref(Hand.Rock)" @click="onClick(Hand.Rock)" />
-        <HandImage :hand="ref(Hand.Paper)" @click="onClick(Hand.Paper)" />
-        <HandImage :hand="ref(Hand.Scissors)" @click="onClick(Hand.Scissors)" />
+        <HandImage :hand="ref(Hand.Rock)" @click="onClick(Hand.Rock)" :isPlayer="false" />
+        <HandImage :hand="ref(Hand.Paper)" @click="onClick(Hand.Paper)" :isPlayer="false" />
+        <HandImage :hand="ref(Hand.Scissors)" @click="onClick(Hand.Scissors)" :isPlayer="false" />
     </div>
 </template>
 

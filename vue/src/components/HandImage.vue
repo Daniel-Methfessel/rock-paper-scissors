@@ -4,10 +4,11 @@ import type { Ref } from 'vue';
 import { computed } from 'vue'
 
 const props = defineProps<{
-    hand: Ref<Hand | undefined>
+    hand: Ref<Hand | undefined>,
+    isPlayer: boolean
 }>()
 
-const isClickable = !!props.hand.value
+const isClickable = !props.isPlayer
 const cssClass = isClickable ? 'clickable' : 'choosen'
 const hideImage = computed(() => !props.hand.value)
 
@@ -36,8 +37,8 @@ const source = computed(() => {
 </script>
 
 <template>
-    <img :class="cssClass" :style="hideImage ? 'visibility:hidden' : undefined" :src="source" :alt="label ? $t(label) : undefined"
-        :title="label ? $t(label) : undefined" />
+    <img :class="cssClass" :style="hideImage ? 'visibility:hidden' : undefined" :src="source"
+        :alt="label ? $t(label) : undefined" :title="label ? $t(label) : undefined" />
 </template>
 
 <style scoped lang="scss">

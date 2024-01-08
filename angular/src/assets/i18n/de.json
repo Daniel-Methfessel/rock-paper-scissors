@@ -1,5 +1,7 @@
 {
     "Rock, paper, scissors": "Stein, Schere, Papier",
+	"Play!": "Spiel starten!",
+	"Not found": "Die angefragte Ressource konnte nicht gefunden werden.",
     "rock": "Stein",
     "paper": "Schere",
     "scissors": "Papier",
