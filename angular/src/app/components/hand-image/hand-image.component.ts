@@ -53,8 +53,6 @@ export class HandImageComponent implements OnInit {
 
   ngOnInit(): void {
     // Know only on OnInit the initial value of the hand.
-    // It is not computed.
-    // TODO: could of course have an explicit flag for it...
-    this.isClickable.set(this.isPlayer)
+    this.isClickable.set(!this.isPlayer)
   }
 }

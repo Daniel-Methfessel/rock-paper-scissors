@@ -1,20 +1,31 @@
-<header>
-    <h1>{{ title | translate }}</h1>
+<div class="content">
+    <header>
+        <h1>{{ title | translate }}</h1>
 
-    <app-select-locale />
-  </header>
+        <app-select-locale />
+    </header>
 
-  
-  <p>TODO: decription</p>
+    <p>{{'A rock-paper-scissors game against a computer opponent.' | translate}}</p>
 
-  <a [routerLink]="'/play'">{{'Play!' | translate}}</a>
+    <a [routerLink]="'/play'">{{'Play!' | translate}}</a>
 
-  <!--
-      TODO: footer stuff:
-      * image reference
-      * idea reference
-      https://github.com/elsehow/aaronson-oracle
-      * licensing
-      * source code
-      * my website
-  -->
+    <div class="sources">
+        <h2>{{'References' | translate}}</h2>
+
+        <ol>
+            <li><a href="https://github.com/elsehow/aaronson-oracle">{{
+                    'Concept' | translate}}</a>
+                ({{'Thanks to' | translate}}
+                <a href="https://www.linkedin.com/in/harald-meyer-auf-m-hofe-00934a116/">Harald</a>
+                {{'for the suggestion.' | translate}})
+            </li>
+            <li><a href="https://openclipart.org/detail/325645/hands-3">{{
+                    'OpenClipArt.org: Source of the hand images.' | translate }}</a>
+            </li>
+            <li><a href="https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/angular">{{
+                    'GitHub repository for the source code of this page.' | translate}}</a></li>
+            <li><a [href]="'http://www.DaMe-Software.com' | translate">{{
+                    'My website.' | translate }}</a></li>
+        </ol>
+    </div>
+</div>

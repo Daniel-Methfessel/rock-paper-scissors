@@ -3,33 +3,49 @@ import SelectLocale from './SelectLocale.vue';
 </script>
 
 <template>
-    <header>
-        <h1>{{ $t('Rock, paper, scissors') }}</h1>
+    <div class="content">
+        <header>
+            <h1>{{ $t('Rock, paper, scissors') }}</h1>
 
-        <SelectLocale />
-    </header>
+            <SelectLocale />
+        </header>
 
-    <p>TODO: decription</p>
+        <p>{{ $t('A rock-paper-scissors game against a computer opponent.') }}</p>
 
-    <a href="/play">{{ $t('Play!') }}</a>
+        <a href="/play">{{ $t('Play!') }}</a>
 
-    <!--
-        TODO: footer stuff:
-        * image reference
-        * idea reference
-        https://github.com/elsehow/aaronson-oracle
-        * licensing
-        * source code
-        * my website
-    -->
+        <div class="sources">
+            <h2>{{ $t('References') }}</h2>
+
+            <ol>
+                <li><a href="https://github.com/elsehow/aaronson-oracle">{{
+                    $t('Concept') }}</a>
+                    ({{ $t('Thanks to') }}
+                    <a href="https://www.linkedin.com/in/harald-meyer-auf-m-hofe-00934a116/">Harald</a>
+                    {{ $t('for the suggestion.') }})
+                </li>
+                <li><a href="https://openclipart.org/detail/325645/hands-3">{{
+                    $t('OpenClipArt.org: Source of the hand images.') }}</a></li>
+                <li><a href="https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/vue">{{
+                    $t('GitHub repository for the source code of this page.') }}</a></li>
+                <li><a :href="$t('http://www.DaMe-Software.com')">{{
+                    $t('My website.') }}</a></li>
+            </ol>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
+.content {
+    padding: 0.5em;
+    max-width: 30em;
+    margin: 0 auto;
+}
+
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.2em;
 
     @media (orientation:portrait) {
         font-size: smaller;

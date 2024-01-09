@@ -44,14 +44,14 @@ const source = computed(() => {
 <style scoped lang="scss">
 .choosen {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 45vw;
+    max-height: 60vh;
 }
 
 .clickable {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 30vw;
+    max-height: 40vh;
 
     @media (orientation:landscape) {
         flex-direction: column;

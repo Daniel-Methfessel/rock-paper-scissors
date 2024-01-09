@@ -1,12 +1,10 @@
 <script setup lang="ts">
 </script>
 
-<style lang="scss">
-select {
+<style lang="scss">select {
     display: block;
     font-size: 1.5em;
-    margin: 0.25em;
-
+    height: 2em;
 }
 </style>
 
