@@ -14,6 +14,18 @@ import SelectLocale from './SelectLocale.vue';
 
         <a href="/play">{{ $t('Play!') }}</a>
 
+        <div class="alternatives">
+            <h2>{{ $t('Alternative frontend frameworks') }}</h2>
+
+            <p>{{ $t('Why alternative frameworks.') }}</p>
+
+            <ol>
+                <li><a href="../angular/">Angular</a></li>
+                <li><a href="../blazor/">Blazor</a></li>
+                <li><a href="../react/">React.js</a></li>
+            </ol>
+        </div>
+
         <div class="sources">
             <h2>{{ $t('References') }}</h2>
 

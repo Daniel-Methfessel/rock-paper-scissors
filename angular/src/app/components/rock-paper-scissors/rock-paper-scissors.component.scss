@@ -1,25 +1,26 @@
 .content {
     display: flex;
     flex-direction: row;
-    gap: 1em;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 auto;
     max-width: 100%;
 
     @media (orientation:portrait) {
         flex-direction: column;
+        gap: 5vh;
     }
 }
 
 .result {
     display: flex;
     flex-direction: row;
-    gap: 1em;
-    justify-content: space-around;
+    gap: min(1vh, 1vw);
+    justify-content: space-evenly;
     max-width: 100%;
+    margin-top: min(2vw, 2vh);
 
     @media (orientation:landscape) {
-        max-height: calc(100vh - 6em);
-        max-width: 85%;
+        max-height: 100%;
+        vertical-align: center;
     }
 }

@@ -18,7 +18,9 @@ const cssClass = computed(() => {
 
 <template>
     <div class="player">
-        <HandImage :class="cssClass" :hand="props.player.hand" :isPlayer="true" />
+        <div :class="cssClass">
+            <HandImage :hand="props.player.hand" :isPlayer="true" />
+        </div>
         <p class="score">{{ player.percentage.value }}</p>
     </div>
 </template>
@@ -30,21 +32,49 @@ const cssClass = computed(() => {
 
 .winner {
     background-color: hsl(120, 93%, 90%);
+    border: min(1vh, 1vw) outset hsl(120, 93%, 90%);
+    border-radius: min(10vh, 10vw);
+
+    @media (prefers-color-scheme:dark) {
+        background-color: hsl(120, 93%, 10%);
+    }
 }
 
 .loser {
     background-color: hsl(340, 57%, 90%);
+    border: min(1vh, 1vw) outset hsl(340, 57%, 90%);
+    border-radius: min(10vh, 10vw);
+
+    @media (prefers-color-scheme:dark) {
+        background-color: hsl(340, 57%, 10%);
+    }
 }
 
 .tie {
     background-color: hsl(0, 0%, 90%);
+    border: min(1vh, 1vw) outset hsl(0, 0%, 90%);
+    border-radius: min(10vh, 10vw);
+
+    @media (prefers-color-scheme:dark) {
+        background-color: hsl(0, 0%, 10%);
+    }
 }
 
 .score {
+    display: block;
     text-align: center;
     position: absolute;
-    left: 40%;
-    top: 10vh;
+    left: 0;
+    right: 0;
+    top: 40vh;
     font-size: 3em;
+
+    @media (orientation:portrait) {
+        top: 15vh;
+    }
+
+    @media (prefers-color-scheme:dark) {
+        color: #000;
+    }
 }
 </style>

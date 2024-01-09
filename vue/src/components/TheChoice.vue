@@ -12,9 +12,9 @@ function onClick(hand: Hand): void { emit('clickHand', hand) }
 
 <template>
     <div class="choice">
-        <HandImage :hand="ref(Hand.Rock)" @click="onClick(Hand.Rock)" :isPlayer="false" />
-        <HandImage :hand="ref(Hand.Paper)" @click="onClick(Hand.Paper)" :isPlayer="false" />
-        <HandImage :hand="ref(Hand.Scissors)" @click="onClick(Hand.Scissors)" :isPlayer="false" />
+        <HandImage class="hand" :hand="ref(Hand.Rock)" @click="onClick(Hand.Rock)" :isPlayer="false" />
+        <HandImage class="hand" :hand="ref(Hand.Paper)" @click="onClick(Hand.Paper)" :isPlayer="false" />
+        <HandImage class="hand" :hand="ref(Hand.Scissors)" @click="onClick(Hand.Scissors)" :isPlayer="false" />
     </div>
 </template>
 
@@ -22,12 +22,25 @@ function onClick(hand: Hand): void { emit('clickHand', hand) }
 .choice {
     display: flex;
     flex-direction: row;
-    gap: 1em;
-    justify-content: space-around;
-    max-width: 100%;
+    justify-content: space-evenly;
 
     @media (orientation:landscape) {
         flex-direction: column;
+        height: 100vh;
+    }
+
+    @media (orientation:portrait) {
+        width: 100vw;
+    }
+
+    .hand {
+        border: min(1vh, 1vw) outset;
+        border-radius: min(5vh, 5vw);
+    }
+
+    .hand:hover,
+    .hand:active {
+        border-style: inset;
     }
 }
 </style>

@@ -44,8 +44,13 @@ const source = computed(() => {
 <style scoped lang="scss">
 .choosen {
     display: block;
-    max-width: 45vw;
+    max-width: 40vw;
     max-height: 60vh;
+
+    @media (orientation:landscape) {
+        max-width: 42vw;
+        max-height: calc(95vh - 1em);
+    }
 }
 
 .clickable {
@@ -55,7 +60,8 @@ const source = computed(() => {
 
     @media (orientation:landscape) {
         flex-direction: column;
-        max-height: calc(30vh - 6em);
+        max-width: 16vw;
+        max-height: calc(30vh - 0.5em);
     }
 }
 </style>
