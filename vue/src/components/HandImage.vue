@@ -12,18 +12,22 @@ const isClickable = !props.isPlayer
 const cssClass = isClickable ? 'clickable' : 'choosen'
 const hideImage = computed(() => !props.hand.value)
 
-const handKey = new Map<Hand, string>([
-    [Hand.Rock, '1'],
-    [Hand.Paper, '2'],
-    [Hand.Scissors, '3']
-])
+const label = computed(() => {
+    if (!props.hand.value) { return '' }
 
-const label = computed(() =>
-    props.hand.value
-        ? isClickable
-            ? `${props.hand.value?.toString()} (press '${handKey.get(props.hand.value)}')`
-            : props.hand.value?.toString()
-        : '')
+    if (!isClickable) { return props.hand.value.toString() }
+
+    switch (props.hand.value) {
+        case Hand.Rock:
+            return "rock (press '1')"
+        case Hand.Paper:
+            return "paper (press '2')"
+        case Hand.Scissors:
+            return "scissors (press '3')"
+        default:
+            return ''
+    }
+})
 
 const source = computed(() => {
     switch (props.hand.value ?? '') {

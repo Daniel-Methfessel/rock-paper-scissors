@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HandImageComponent } from './hand-image.component';
 import { Hand } from '../../game/hand';
 import { signal } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('HandImageComponent', () => {
   let component: HandImageComponent;
@@ -10,7 +11,10 @@ describe('HandImageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HandImageComponent]
+      imports: [
+        TranslateModule.forRoot(),
+        HandImageComponent
+      ]
     })
     .compileComponents();
     

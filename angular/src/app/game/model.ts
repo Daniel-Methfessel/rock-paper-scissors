@@ -11,7 +11,7 @@ export class Model {
         // Suchen die Hand, die bei diesem Muster am häufigsten als letztes kam.
         let result: Hand | undefined
         let count = 0
-        for (const key of map.keys()) {
+        for (const key of Object.values(Hand)) {
             const value = map.get(key) ?? 0
             if (count < value) {
                 count = value

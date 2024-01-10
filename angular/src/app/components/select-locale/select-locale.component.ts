@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, Inject, effect, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-select-locale',
@@ -17,8 +19,16 @@ export class SelectLocaleComponent {
 
   public readonly currentLocale = signal('en')
 
-  constructor(private readonly translate: TranslateService) {
-
+  constructor(
+    private readonly translate: TranslateService,
+    @Inject(PLATFORM_ID) platformId: Object) {
+    if (isPlatformBrowser(platformId)) {
+      const storageKey = 'language'
+      effect(() => window.localStorage.setItem(storageKey, this.currentLocale()))
+      this.setLocale(window.localStorage.getItem(storageKey)
+        ?? navigator.languages.map(l => l.substring(0, 2)).find(l => this.langs.find(o => o.locale == l))
+        ?? 'fr')
+    }
   }
 
   public setLocale(locale: string) {

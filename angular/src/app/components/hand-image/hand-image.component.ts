@@ -22,22 +22,27 @@ export class HandImageComponent implements OnInit {
   public readonly label: Signal<string>
   public readonly source: Signal<string>
 
-  private readonly handKey = new Map<Hand, string>([
-    [Hand.Rock, '1'],
-    [Hand.Paper, '2'],
-    [Hand.Scissors, '3']
-  ])
-
   constructor() {
     this.cssClass = computed(() => this.isClickable() ? 'clickable' : 'choosen')
     this.hideImage = computed(() => !this.hand())
 
     this.label = computed(() => {
       const hand = this.hand()
-      return hand ? this.isClickable()
-        ? _(`${hand?.toString()} (press '${this.handKey.get(hand)}')`)
-        : _(hand?.toString())
-        : ''
+
+      if (!hand) { return '' }
+
+      if (!this.isClickable()) { return hand.toString() }
+
+      switch (hand) {
+        case Hand.Rock:
+          return "rock (press '1')"
+        case Hand.Paper:
+          return "paper (press '2')"
+        case Hand.Scissors:
+          return "scissors (press '3')"
+        default:
+          return ''
+      }
     })
 
     this.source = computed(() => {

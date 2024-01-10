@@ -4,7 +4,7 @@ A simple game implemented in different frontend frameworks for comparison:
 
 * [Angular](angular/)
 * [Blazor](blazor/)
-* [React](react/)
+* [React](reactjs/)
 * [Vue](vue/)
 
 ## Aaronson Oracle

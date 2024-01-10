@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PlayerHandComponent } from './player-hand.component';
 import { Player } from '../../game/player';
 import { signal } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('PlayerHandComponent', () => {
   let component: PlayerHandComponent;
@@ -10,7 +11,10 @@ describe('PlayerHandComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PlayerHandComponent]
+      imports: [
+        TranslateModule.forRoot(),
+        PlayerHandComponent
+      ]
     })
     .compileComponents();
     

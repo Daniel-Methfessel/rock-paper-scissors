@@ -1,0 +1,8 @@
+@mixin button {
+    border-style: outset;
+
+    &:hover,
+    &:active {
+        border-style: inset;
+    }
+}

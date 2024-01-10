@@ -19,6 +19,8 @@ function onClick(hand: Hand): void { emit('clickHand', hand) }
 </template>
 
 <style scoped lang="scss">
+@use '../border';
+
 .choice {
     display: flex;
     flex-direction: row;
@@ -34,13 +36,9 @@ function onClick(hand: Hand): void { emit('clickHand', hand) }
     }
 
     .hand {
-        border: min(1vh, 1vw) outset;
+        @include border.button;
+        border-width: min(1vh, 1vw);
         border-radius: min(5vh, 5vw);
-    }
-
-    .hand:hover,
-    .hand:active {
-        border-style: inset;
     }
 }
 </style>

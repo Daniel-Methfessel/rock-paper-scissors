@@ -11,13 +11,18 @@ const messages = {
 
 // see https://github.com/lokalise/lokalise-tutorials/
 
+const storedLocale = window.localStorage.getItem('language')?.substring(0, 2)
+const locale = storedLocale && 0 <= Object.keys(messages).indexOf(storedLocale)
+    ? storedLocale : navigator.language.substring(0, 2)
+    
 export const i18n = createI18n({
-    locale: navigator.language.substring(0, 2),
+    locale: locale,
     fallbackLocale: 'en',
     messages,
     legacy: false,
     globalInjection: true,
     runtimeOnly: false,
-    sync: true
+    sync: true,
 })
+
 

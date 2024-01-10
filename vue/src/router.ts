@@ -1,6 +1,6 @@
 // https://stackblitz.com/edit/vue3-vite-router-typescript-starter?file=src%2FApp.vue,src%2Frouter.ts
 import { createRouter, createWebHistory } from 'vue-router'
-import TheAbout from '@/components/TheAbout.vue';
+import TheAbout from '@/views/TheAbout.vue';
 
 export default createRouter({
   history: createWebHistory(),
@@ -11,7 +11,7 @@ export default createRouter({
     },
     {
       path: '/play',
-      component: () => import('@/components/TheRockPaperScissors.vue'),
+      component: () => import('@/views/TheRockPaperScissors.vue'),
     },
     {
       path: '/:pathMatch(.*)*',

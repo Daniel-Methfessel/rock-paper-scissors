@@ -1,0 +1,22 @@
+@use '../border';
+
+.choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @media (orientation:landscape) {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    @media (orientation:portrait) {
+        width: 100vw;
+    }
+
+    .hand {
+        @include border.button;
+        border-width: min(1vh, 1vw);
+        border-radius: min(5vh, 5vw);
+    }
+}

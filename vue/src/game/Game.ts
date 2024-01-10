@@ -30,7 +30,6 @@ export class Game {
 
         // Only after the robot made his choice he can see the choice the human made.
         this.opponent.updateModel(this.history, humanHand)
-        // Adding to the history only after the robot learned from it!
         this.history.add(humanHand)
 
         // Scoring.

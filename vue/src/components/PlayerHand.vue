@@ -33,7 +33,7 @@ const cssClass = computed(() => {
 .winner {
     background-color: hsl(120, 93%, 90%);
     border: min(1vh, 1vw) outset hsl(120, 93%, 90%);
-    border-radius: min(10vh, 10vw);
+    border-radius: min(5vh, 5vw);
 
     @media (prefers-color-scheme:dark) {
         background-color: hsl(120, 93%, 10%);
@@ -43,7 +43,7 @@ const cssClass = computed(() => {
 .loser {
     background-color: hsl(340, 57%, 90%);
     border: min(1vh, 1vw) outset hsl(340, 57%, 90%);
-    border-radius: min(10vh, 10vw);
+    border-radius: min(5vh, 5vw);
 
     @media (prefers-color-scheme:dark) {
         background-color: hsl(340, 57%, 10%);
@@ -53,7 +53,7 @@ const cssClass = computed(() => {
 .tie {
     background-color: hsl(0, 0%, 90%);
     border: min(1vh, 1vw) outset hsl(0, 0%, 90%);
-    border-radius: min(10vh, 10vw);
+    border-radius: min(5vh, 5vw);
 
     @media (prefers-color-scheme:dark) {
         background-color: hsl(0, 0%, 10%);
