@@ -3,7 +3,6 @@
 A simple game implemented in different frontend frameworks for comparison:
 
 * [Angular](angular/)
-* [Blazor](blazor/)
 * [React](reactjs/)
 * [Vue](vue/)
 
