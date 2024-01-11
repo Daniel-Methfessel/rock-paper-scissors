@@ -24,8 +24,8 @@ export default function About() {
                 <p>{t('Why alternative frameworks.')}</p>
 
                 <ol>
-                    <li><a href="../angular/">Angular</a></li>
-                    <li><a href="../vue/">Vue.js</a></li>
+                    <li><a href="https://angular.rock-paper-scissors.dame-software.com/">Angular</a></li>
+                    <li><a href="https://vue.rock-paper-scissors.dame-software.com/">Vue.js</a></li>
                 </ol>
             </div>
 
