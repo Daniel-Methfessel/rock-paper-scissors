@@ -25,7 +25,6 @@ export default function About() {
 
                 <ol>
                     <li><a href="../angular/">Angular</a></li>
-                    <li><a href="../blazor/">Blazor</a></li>
                     <li><a href="../vue/">Vue.js</a></li>
                 </ol>
             </div>

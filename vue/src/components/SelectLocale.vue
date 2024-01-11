@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const langs = [
     { locale: 'en', title: 'English' },

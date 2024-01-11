@@ -21,7 +21,6 @@ import SelectLocale from '../components/SelectLocale.vue';
 
             <ol>
                 <li><a href="../angular/">Angular</a></li>
-                <li><a href="../blazor/">Blazor</a></li>
                 <li><a href="../react/">React.js</a></li>
             </ol>
         </div>

@@ -2,6 +2,8 @@ import { Component, Inject, effect, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
+import { marker as _ } from '@biesbjerg/ngx-translate-extract-marker';
 
 @Component({
   selector: 'app-select-locale',
@@ -20,6 +22,8 @@ export class SelectLocaleComponent {
   public readonly currentLocale = signal('en')
 
   constructor(
+    private readonly title: Title,
+    private readonly meta: Meta,
     private readonly translate: TranslateService,
     @Inject(PLATFORM_ID) platformId: Object) {
     if (isPlatformBrowser(platformId)) {
@@ -34,5 +38,9 @@ export class SelectLocaleComponent {
   public setLocale(locale: string) {
     this.translate.use(locale)
     this.currentLocale.set(locale)
+    this.translate.get(_('Rock, paper, scissors'))
+      .subscribe(t => this.title.setTitle(t))
+    this.translate.get(_('A rock-paper-scissors game against a computer opponent.'))
+      .subscribe(t => this.meta.updateTag({ name: 'description', content: t }))
   }
 }
