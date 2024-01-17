@@ -1,52 +1,24 @@
-# rock-paper-scissors
+# Rock, Paper, Scissors
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple game implemented in different frontend frameworks for comparison:
 
-## Recommended IDE Setup
+* Angular ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/angular), [live demo](https://angular.rock-paper-scissors.dame-software.com/))
+* Blazor ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/blazor), [live demo](https://blazor.rock-paper-scissors.dame-software.com/))
+* React ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/reactjs), [live demo](https://react.rock-paper-scissors.dame-software.com/))
+* Vue (this version, [live demo](https://vue.rock-paper-scissors.dame-software.com/))
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Aaronson Oracle
 
-## Type Support for `.vue` Imports in TS
+The computer opponent is an [Aaronson Oracle](https://github.com/elsehow/aaronson-oracle/tree/master),
+predicting the player's next move from his previous moves.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Where the above link has two outcomes (correct/incorrect),
+thus a 50:50 chance is expected in the perfectly random case,
+here there are three outcomes (win/lose/tie).
+Thus a 1/3 chance of each outcome is expected if playing perfectly randomly.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## License
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+* Source code: BSD
+* Images: via [OpenClipArt.org](https://openclipart.org/detail/325653/rock-scissors-paper)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```

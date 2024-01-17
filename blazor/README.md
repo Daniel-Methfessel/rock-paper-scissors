@@ -2,8 +2,8 @@
 
 A simple game implemented in different frontend frameworks for comparison:
 
-* Angular (this version, [live demo](https://angular.rock-paper-scissors.dame-software.com/))
-* Blazor ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/blazor), [live demo](https://blazor.rock-paper-scissors.dame-software.com/))
+* Angular ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/angular), [live demo](https://angular.rock-paper-scissors.dame-software.com/))
+* Blazor (this version, [live demo](https://blazor.rock-paper-scissors.dame-software.com/))
 * React ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/reactjs), [live demo](https://react.rock-paper-scissors.dame-software.com/))
 * Vue ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/vue), [live demo](https://vue.rock-paper-scissors.dame-software.com/))
 

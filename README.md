@@ -2,9 +2,10 @@
 
 A simple game implemented in different frontend frameworks for comparison:
 
-* [Angular](angular/)
-* [React](reactjs/)
-* [Vue](vue/)
+* Angular ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/angular), [live demo](https://angular.rock-paper-scissors.dame-software.com/))
+* Blazor ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/blazor), [live demo](https://blazor.rock-paper-scissors.dame-software.com/))
+* React ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/reactjs), [live demo](https://react.rock-paper-scissors.dame-software.com/))
+* Vue ([source](https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/vue), [live demo](https://vue.rock-paper-scissors.dame-software.com/))
 
 ## Aaronson Oracle
 
@@ -18,5 +19,6 @@ Thus a 1/3 chance of each outcome is expected if playing perfectly randomly.
 
 ## License
 
-BSD
+* Source code: BSD
+* Images: via [OpenClipArt.org](https://openclipart.org/detail/325653/rock-scissors-paper)
 
