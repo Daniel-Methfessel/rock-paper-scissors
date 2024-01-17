@@ -1,0 +1,30 @@
+.choosen {
+    display: block;
+    max-width: 40vw;
+    max-height: 60vh;
+}
+
+.hidden-image {
+    visibility:hidden;
+}
+
+@media (orientation:landscape) {
+    .choosen {
+        max-width: 42vw;
+        max-height: calc(95vh - 1em);
+    }
+}
+
+.clickable {
+    display: block;
+    max-width: 30vw;
+    max-height: 40vh;
+}
+
+@media (orientation:landscape) {
+    .clickable {
+        flex-direction: column;
+        max-width: 16vw;
+        max-height: calc(30vh - 0.5em);
+    }
+}

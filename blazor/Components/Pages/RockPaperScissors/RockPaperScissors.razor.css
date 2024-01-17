@@ -1,0 +1,60 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+@media (orientation:portrait) {
+    .content {
+        flex-direction: column;
+        gap: 5vh;
+    }
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    gap: min(1vh, 1vw);
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin-top: min(2vw, 2vh);
+}
+
+@media (orientation:landscape) {
+    .result {
+        max-height: 100%;
+        vertical-align: center;
+    }
+}
+
+.choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media (orientation:landscape) {
+    .choice {
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+@media (orientation:portrait) {
+    .choice {
+        width: 100vw;
+    }
+}
+
+.choice .hand {
+    border-style: outset;
+    border-width: min(1vh, 1vw);
+    border-radius: min(5vh, 5vw);
+}
+
+.choice .hand:hover,
+.choice .hand:active {
+    border-style: inset;
+}

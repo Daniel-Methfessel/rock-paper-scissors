@@ -1,0 +1,56 @@
+@page "/"
+@rendermode InteractiveServer
+
+@namespace Demo
+
+<PageTitle>@((Text.Title.Translate()))</PageTitle>
+
+<div class="content">
+    <header>
+        <h1>@((Text.Title.Translate()))</h1>
+
+        <select @bind="CurrentLocale.Selected">
+            @foreach(var lang in LangItems) {
+            <option value="@((lang.Locale))">
+                @((lang.Name))
+            </option>
+            }
+        </select>
+    </header>
+
+    <p>@((Text.Description.Translate()))</p>
+
+    <NavLink href="play" class="start-game">@((Text.Play.Translate()))</NavLink>
+
+    <div class="alternatives">
+        <h2>@((Text.AlternativesTitle.Translate()))</h2>
+
+        <p>@((Text.AlternativesDescription.Translate()))</p>
+
+        <ol>
+            <li><a href="https://angular.rock-paper-scissors.dame-software.com/">Angular</a></li>
+            <li><a href="https://react.rock-paper-scissors.dame-software.com/">React.js</a></li>
+            <li><a href="https://vue.rock-paper-scissors.dame-software.com/">Vue.js</a></li>
+        </ol>
+    </div>
+
+    <div class="sources">
+        <h2>@((Text.References.Translate()))</h2>
+
+        <ol>
+            <li><a href="https://github.com/elsehow/aaronson-oracle">@((Text.Concept.Translate()))</a>
+                (@((Text.ThanksTo.Translate()))
+                <a href="https://www.linkedin.com/in/harald-meyer-auf-m-hofe-00934a116/">Harald</a>
+                @((Text.ForTheSuggestion.Translate())))
+            </li>
+            <li><a href="https://openclipart.org/detail/325645/hands-3">@((Text.ImageSource.Translate()))</a></li>
+            <li><a href="https://github.com/Daniel-Methfessel/rock-paper-scissors/tree/master/blazor">@((Text.GitHub.Translate()))</a>
+            </li>
+            <li><a href="@MyWebsite">@((Text.MyWebsite.Translate()))</a></li>
+        </ol>
+    </div>
+</div>
+
+@code {
+    public string MyWebsite => "http://www.DaMe-Software." + Text.Com.Translate();
+}

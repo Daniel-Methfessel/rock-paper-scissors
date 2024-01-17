@@ -1,0 +1,14 @@
+@namespace Demo
+
+<img
+   class="@((CssClass))"
+   src="@((Source))"
+   alt="@((Label))" title="@((Label))" />
+
+@code {
+    [Parameter]
+    public Hand? Hand { get; set; }
+
+    [Parameter]
+    public bool IsPlayer { get; set; }
+}

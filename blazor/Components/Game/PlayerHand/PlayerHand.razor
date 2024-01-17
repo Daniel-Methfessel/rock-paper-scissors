@@ -1,0 +1,13 @@
+@namespace Demo
+
+<div class="player">
+    <div class="@((CssClass))">
+        <HandImage Hand="Player?.Hand" IsPlayer="true" />
+    </div>
+    <p class="score">@((Player?.Percentage ?? ""))</p>
+</div>
+
+@code {
+    [Parameter]
+    public Player? Player { get; set; }
+}

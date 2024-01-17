@@ -1,0 +1,50 @@
+@page "/play"
+@rendermode InteractiveServer
+
+@namespace Demo
+
+<div class="content" @ref="keyboardListener" tabindex="0" @onkeypress="KeyboardEventHandler">
+    <div class="result">
+        <PlayerHand Player="gameState.Human" />
+        <PlayerHand Player="gameState.Robot" />
+    </div>
+
+    <div class="choice">
+        <div class="hand" @onclick="() => HandClicked(Hand.Rock)">
+        <HandImage Hand="Hand.Rock" IsPlayer="false" />
+        </div>
+        <div class="hand" @onclick="() => HandClicked(Hand.Paper)">
+        <HandImage Hand="Hand.Paper" IsPlayer="false" />
+        </div>
+        <div class="hand" @onclick="() => HandClicked(Hand.Scissors)">
+        <HandImage Hand="Hand.Scissors" IsPlayer="false" />
+        </div>
+    </div>
+</div>
+
+@code {
+    private void KeyboardEventHandler(KeyboardEventArgs args )
+    {
+        switch (args.Key) {
+            case "1":
+                HandClicked(Hand.Rock);
+                break;
+            case "2":
+                HandClicked(Hand.Paper);
+                break;
+            case "3":
+                HandClicked(Hand.Scissors);
+                break;
+        }
+    }
+
+    private ElementReference keyboardListener;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await keyboardListener.FocusAsync();
+        }
+    }
+}
