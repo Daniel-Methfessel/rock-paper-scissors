@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Signal, computed, signal } from '@angular/core';
+import { Component, Input, OnInit, Signal, booleanAttribute, computed, signal } from '@angular/core';
 import { Hand } from '../../game/hand';
 import { marker as _ } from '@biesbjerg/ngx-translate-extract-marker';
 import { TranslateModule } from '@ngx-translate/core';
@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HandImageComponent implements OnInit {
   @Input({ required: true }) public hand!: Signal<Hand | undefined>
-  @Input({ required: true }) public isPlayer!: boolean
+  @Input({ transform: booleanAttribute }) public isPlayer!: boolean
 
   private readonly isClickable = signal(false)
   public readonly cssClass: Signal<string>
