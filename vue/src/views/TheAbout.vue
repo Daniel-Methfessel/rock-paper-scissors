@@ -20,8 +20,8 @@ import SelectLocale from '../components/SelectLocale.vue';
             <p>{{ $t('Why alternative frameworks.') }}</p>
 
             <ol>
-                <li><a href="https://blazor.rock-paper-scissors.dame-software.com/">Blazor</a></li>
                 <li><a href="https://angular.rock-paper-scissors.dame-software.com/">Angular</a></li>
+                <li><a href="https://blazor.rock-paper-scissors.dame-software.com/">Blazor</a></li>
                 <li><a href="https://react.rock-paper-scissors.dame-software.com/">React.js</a></li>
             </ol>
         </div>
