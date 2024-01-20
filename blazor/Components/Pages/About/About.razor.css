@@ -21,7 +21,7 @@ header {
     padding: 0.5em 1em;
     background-color: palegreen;
     color: inherit;
-    text-decoration: none;
+
     font-size: 2em;
     font-weight: bold;
 
@@ -37,8 +37,8 @@ header {
     }
 }
 
-.start-game:hover,
-.start-game:active {
+.start-game a:hover,
+.start-game a:active {
     border-style: inset;
 }
 
